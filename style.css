@@ -38,6 +38,13 @@ body {
     border: 3px solid black;
 }
 
+#header-image1{
+  width: 120px; 
+  height: 120px; 
+  border-radius: 200px !important; 
+  border: 3px solid black;
+}
+
 .number-info {
     color: rgb(172, 172, 172);
     font-weight: 100;
@@ -165,3 +172,9 @@ body {
 
 
 /* ===========//LOADER STYLE//============= */
+
+@media (max-height: 800px) {
+  body{
+    height: 100dvh;
+  }
+}

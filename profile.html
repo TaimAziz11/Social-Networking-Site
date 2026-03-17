@@ -74,8 +74,8 @@
             
         <div class="d-flex justify-content-center" style="margin-top: 80px;">
             <div class="col-9">
-                <!-- MAIN INFO -->
-                <div class="card shadow">
+                <!-- MAIN INFO FOR LARGE SCREEN-->
+                <div class="card shadow d-none d-md-block">
                     
                     <div class="card-body">
                         <div class="row">
@@ -112,7 +112,48 @@
                         </div>
                     </div>
                 </div>
-                <!-- MAIN INFO -->
+                <!--// MAIN INFO FOR LARGE SCREEN //-->
+
+                <!-- MAIN INFO FOR MOBILE SCREEN -->
+                <div class="card shadow d-block d-md-none">
+                    
+                    <div class="card-body">
+                        <!-- USER IMAGE -->
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img id="header-image1" src=""  alt="">
+                        </div> 
+                        <!--// USER IMAGE // -->
+                        <div class="row">
+                            
+
+                            <!-- USERNAME + EMAIL + NAME -->
+                            <div id="main-info" class="col-4 d-flex flex-column justify-content-evenly">
+                                <div class="user-main-info" >
+                                    <strong>Email: </strong><span id="user-email1"></span>
+                                </div>
+                                <div class="user-main-info" >
+                                    <strong>Name: </strong><span id="user-name1"></span>
+                                </div>
+                                <div class="user-main-info" >
+                                    <strong>Username: </strong><span id="user-username1"></span>
+                                </div>
+                            </div> 
+                            <!--// USERNAME + EMAIL + NAME //-->
+
+                            <!-- POSTS AND COMMENTS COUNT -->
+                            <div class="col-4 d-flex flex-column justify-content-evenly" style="margin-left: 70px;">
+                                <div class="number-info">
+                                    <span id="posts-count1">13</span> Posts
+                                </div>
+                                <div class="number-info">
+                                    <span id="comments-count1">10</span> Comments
+                                </div>
+                            </div> 
+                            <!--// POSTS AND COMMENTS COUNT //-->
+                        </div>
+                    </div>
+                </div>
+                <!--// MAIN INFO FOR MOBILE SCREEN //-->
 
                 <!-- POSTS TITLE -->
                 <div class="row d-flex justify-content-center mt-3">
