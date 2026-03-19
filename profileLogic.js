@@ -104,7 +104,6 @@ function getUser(){
         document.getElementById("user-name1").innerHTML = user.name
         document.getElementById("user-username1").innerHTML = user.username
         document.getElementById("posts-count1").innerHTML = user.posts_count
-        document.getElementById("comments-count1").innerHTML = user.comments_count
         document.getElementById("header-image1").src = user.profile_image
     })
 }
