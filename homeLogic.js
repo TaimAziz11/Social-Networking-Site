@@ -61,7 +61,7 @@ function getPosts(page = 1 , reload = true) {
                 // document.getElementById("tags").innerHTML += tagsContent
             }
             let content 
-            if(window.innerHeight < 768){
+            if(window.innerWidth < 768){
                 content = `
                 <!-- POST -->
                         <div class="card shadow bg-light" style="height: 500px">
