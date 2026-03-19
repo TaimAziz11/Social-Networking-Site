@@ -147,7 +147,44 @@ function getPosts() {
                 `
             }
             
-            let content = `
+            let content 
+            if(window.innerWidth < 768){
+                content = `
+                <!-- POST -->
+                        <div class="card shadow bg-light" style="height: 570px;">
+                            <div class="card-header text-light" style="background-color: #7f4fdf;">
+                                <img src="${author.profile_image}" alt="" class="rounded-circle border border-4" style="width: 40px; height: 40px;">
+                                <b>${author.name}</b>
+                                ${editButtonContent}
+                            </div>
+                            <div class="card-body" onclick="postClicked(${post.id})" style="cursor: pointer;">
+                                <img src="${post.image}" alt="" class="w-100" style="height: 260px;">
+                                <h6 style="color: rgb(124, 124, 124);" class="mt-1">
+                                    ${post.created_at}
+                                </h6>
+                                <h5>
+                                    ${postTitle}
+                                </h5>
+                                <p style="white-space: pre-line">${post.body}</p>
+                                <hr>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                    </svg>
+                                    <span>
+                                        (${post.comments_count}) Comments
+                                        <span id="post-tag-${post.id}">
+                                            ${tagsContent}
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                <!--// POST //-->
+            `
+            }else{
+                content = `
                 <!-- POST -->
                         <div class="card shadow bg-light">
                             <div class="card-header text-light" style="background-color: #7f4fdf;">
@@ -181,6 +218,7 @@ function getPosts() {
                         </div>
                 <!--// POST //-->
             `
+            }
 
             document.getElementById("user-posts").innerHTML += content
         }
